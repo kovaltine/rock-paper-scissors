@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+	<meta charset="utf-8"/>
+<title>Rock Paper Scissors</title>
+<body>
+<script>
+
+//add a counter
+var playerScore = 0;
+var computerScore = 0;
+var roundNumber = 0;
+
+//play the game five times
+function game() {
+	while (roundNumber < 5) {
+		playRound();
+	} if (playerScore > computerScore) {
+		return alert("You WIN! You're the best!")
+	} else if (computerScore > playerScore) {
+		return alert("You LOSE! :(")
+	} else {
+		return alert("Tie Game!")
+	}
+}
+
+//a function that takes two parameters and declares the winner
+function playRound() {
+
+	//taking a prompt to determine playerSelection
+	var playerOptions = prompt('rock, paper, or scissors?').toLowerCase();
+	playerSelection = playerOptions;
+
+	//takes a random choice to determine the computerSelection
+	var computerOptions = ['rock', 'paper', 'scissors']
+	var computerSelection = computerOptions[Math.floor(Math.random()*computerOptions.length)];
+
+	//check for a tie
+	if(playerSelection === computerSelection){
+        result = 'it is a tie';
+		console.log(result, computerSelection, playerSelection);
+		var message = "It/'s a tie! " + playerSelection + " ties " + computerSelection + ".";
+		++roundNumber;
+		return;
+	} else if
+	
+	//check for player rock
+	(playerSelection === 'rock' && computerSelection === 'scissors'){
+		result = 'Player wins';
+		console.log(result, computerSelection, playerSelection);
+		var message = "You win! " + playerSelection + " beats " + computerSelection + ".";
+		++roundNumber;
+		++playerScore;
+		return;
+	} else if
+	
+	//check for player scissors
+	(playerSelection === 'scissors' && computerSelection === 'paper'){
+		result = 'Player wins';
+		console.log(result, computerSelection, playerSelection);
+		var message = "You win! " + playerSelection + " beats " + computerSelection + ".";
+		++roundNumber;
+		++playerScore;
+		return;
+	} else if
+	
+	//check for player paper
+	(playerSelection === 'paper' && computerSelection === 'rock'){
+		result = 'Player wins';
+		console.log(result, computerSelection, playerSelection);
+		var message = "You win! " + playerSelection + " beats " + computerSelection + ".";
+		++roundNumber;
+		++playerScore;
+		return;
+	} else if
+	
+	//check for computer rock
+	(computerSelection === 'rock' && playerSelection === 'scissors') {
+		result = 'Computer wins';
+		console.log(result, computerSelection, playerSelection);
+		var message = "You lose! " + computerSelection + " beats " + playerSelection + ".";
+		++roundNumber;
+		++computerScore;
+		return;
+	} else if
+	
+	//check for computer scissors
+	(computerSelection === 'scissors' && playerSelection === 'paper') {
+		result = 'Computer wins';
+		console.log(result, computerSelection, playerSelection);
+		var message = "You lose! " + computerSelection + " beats " + playerSelection + ".";
+		++roundNumber;
+		++computerScore;
+		return;
+	} else if
+	
+	//check for computer paper
+	(computerSelection === 'paper' && playerSelection === 'rock') {
+		result = 'Computer wins';
+		console.log(result, computerSelection, playerSelection);
+		var message = "You lose! " + computerSelection + " beats " + playerSelection + ".";
+		++roundNumber;
+		++computerScore;
+		return;
+	} else {
+		return 'Choose either rock, paper, or scissors';
+	}
+
+}
+
+game();
+
+
+</script>
+</body>
+</html>
