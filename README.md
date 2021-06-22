@@ -1,2 +1,3 @@
 # rock-paper-scissors
-simple rock paper scissors game from Web Development 101 of The Odin Project. 
+
+simple rock paper scissors game from The Odin Project
